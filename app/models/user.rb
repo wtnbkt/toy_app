@@ -7,4 +7,7 @@ class User < ApplicationRecord
     presence: true,
     format: { with:/\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i },
     uniqueness: true
+  validates :password,
+    presence: true,
+    format: { with: /\A[a-zA-Z0-9]+\z/ }
 end
